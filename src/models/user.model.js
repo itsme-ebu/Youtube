@@ -39,8 +39,6 @@ const userSchema = new mongoose.Schema(
     },
     password: { type: String, required: true },
     profilePic: { type: String },
-    createdAt: { type: Date, default: Date.now },
-    updatedAt: { type: Date, default: Date.now },
     subscribedChannels: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
     subscriptions: [
       { type: mongoose.Schema.Types.ObjectId, ref: "Subscription" },
